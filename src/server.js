@@ -43,7 +43,7 @@ export default class ProxyServer extends EventEmitter {
 
         // create the server we use to intercept the pings
         this.server = mc.createServer({
-            "online-mode": true,
+            "online-mode": false,
             port: listenPort,
             keepAlive: false,
             beforePing: this.beforePing.bind(this),
